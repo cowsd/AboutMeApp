@@ -134,7 +134,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mt9-a5-TgB"/>
-                        <color key="backgroundColor" red="0.9471704942667466" green="0.93062767033674754" blue="0.89492999764569703" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6bR-Oh-QT2" firstAttribute="centerY" secondItem="Mt9-a5-TgB" secondAttribute="centerY" id="KTb-hr-v4B"/>
                             <constraint firstItem="6bR-Oh-QT2" firstAttribute="centerX" secondItem="Mt9-a5-TgB" secondAttribute="centerX" id="e7q-KY-7Sn"/>
@@ -164,6 +164,9 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
