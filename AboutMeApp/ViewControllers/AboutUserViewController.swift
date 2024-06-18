@@ -7,23 +7,44 @@
 
 import UIKit
 
-class AboutUserViewController: UIViewController {
+    final class AboutUserViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        @IBOutlet weak var firstNameLabel: UILabel!
+        @IBOutlet weak var lastNameLabel: UILabel!
+        @IBOutlet weak var titleFullName: UILabel!
+        @IBOutlet weak var occupationLabel: UILabel!
+        @IBOutlet weak var yearOfBirthLabel: UILabel!
+        @IBOutlet weak var countryOfBirthLabel: UILabel!
+        @IBOutlet weak var avatarImage: UIImageView!
+        
+        var firstName: String!
+        var lastName: String!
+        var occupation: String!
+        var yearOfBirth: Int!
+        var countryOfBirth: String!
+        var avatar: String!
+        var biography: String!
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            
+            view.addVerticalGradientLayer(topColor: UIColor.topGradientColor, bottomColor: UIColor.bottomGradientColor)
+            
+            titleFullName.text = "\(firstName ?? "") \(lastName ?? "")"
+            firstNameLabel.text = firstName
+            lastNameLabel.text = lastName
+            occupationLabel.text = occupation
+            yearOfBirthLabel.text = String(yearOfBirth)
+            countryOfBirthLabel.text = countryOfBirth
+            avatarImage.image = UIImage(named: avatar)
+            avatarImage.layer.cornerRadius = avatarImage.frame.size.width / 2
+        }
+        
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if let detailedBioVC = segue.destination as? BiographyViewController {
+                detailedBioVC.biography = biography
+                detailedBioVC.firstName = firstName
+            }
+        }
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}

@@ -10,27 +10,16 @@ import UIKit
 final class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var greetingLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     
+    var displayUsername: String!
     var displayName: String!
-   
-    private let primaryColor = UIColor(
-        red: 210/255,
-        green: 109/255,
-        blue: 128/255,
-        alpha: 1
-    )
-    
-    private let secondaryColor = UIColor(
-        red: 107/255,
-        green: 148/255,
-        blue: 230/55,
-        alpha: 1
-    )
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
-        greetingLabel.text = "Welcome, \(displayName ?? "")"
+        view.addVerticalGradientLayer(topColor: UIColor.topGradientColor, bottomColor: UIColor.bottomGradientColor)
+        greetingLabel.text = "Welcome, \(displayUsername ?? "")"
+        nameLabel.text = "My name is \(displayName ?? "")"
     }
     
 }
@@ -46,5 +35,15 @@ extension UIView {
         gradient.startPoint = CGPoint(x: 0, y: 0)
         gradient.endPoint = CGPoint(x: 0, y: 1)
         layer.insertSublayer(gradient, at: 0)
+    }
+}
+
+extension UIColor {
+    static var topGradientColor: UIColor {
+        return UIColor(named: "TopGradientColor") ?? UIColor.green // Цвет по умолчанию
+    }
+
+    static var bottomGradientColor: UIColor {
+        return UIColor(named: "BottomGradientColor") ?? UIColor.blue // Цвет по умолчанию
     }
 }

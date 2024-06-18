@@ -17,9 +17,12 @@ final class FavoriteAnimalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.addVerticalGradientLayer(topColor: UIColor.topGradientColor, bottomColor: UIColor.bottomGradientColor)
+        
         animalImage.image = UIImage(named: favoriteAnimal.imageName)
         animalImage.layer.cornerRadius = 16
+        
         animalLabel.text = favoriteAnimal.type.rawValue
         animalDescription.text = favoriteAnimal.description
     }

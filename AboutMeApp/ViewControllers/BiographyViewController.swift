@@ -17,9 +17,10 @@ final class BiographyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.tintColor = UIColor.white
         
         view.addVerticalGradientLayer(topColor: UIColor.topGradientColor, bottomColor: UIColor.bottomGradientColor)
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         
         firstNameLabel.text = "\(firstName ?? "") Bio"
         biographyLabel.text = biography
