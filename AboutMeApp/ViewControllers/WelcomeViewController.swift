@@ -12,6 +12,8 @@ final class WelcomeViewController: UIViewController {
     @IBOutlet weak var greetingLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
+    var user: User!
+    
     var displayUsername: String!
     var displayName: String!
     

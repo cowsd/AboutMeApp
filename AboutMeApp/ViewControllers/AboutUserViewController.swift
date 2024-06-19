@@ -17,6 +17,8 @@ import UIKit
         @IBOutlet weak var countryOfBirthLabel: UILabel!
         @IBOutlet weak var avatarImage: UIImageView!
         
+        var user: User!
+        
         var firstName: String!
         var lastName: String!
         var occupation: String!
@@ -36,6 +38,7 @@ import UIKit
             occupationLabel.text = occupation
             yearOfBirthLabel.text = String(yearOfBirth)
             countryOfBirthLabel.text = countryOfBirth
+            
             avatarImage.image = UIImage(named: avatar)
             avatarImage.layer.cornerRadius = avatarImage.frame.size.width / 2
         }

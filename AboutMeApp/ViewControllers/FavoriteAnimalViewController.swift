@@ -13,6 +13,8 @@ final class FavoriteAnimalViewController: UIViewController {
     @IBOutlet weak var animalLabel: UILabel!
     @IBOutlet weak var animalDescription: UILabel!
     
+    var user: User!
+    
     var favoriteAnimal: Animal!
     
     override func viewDidLoad() {

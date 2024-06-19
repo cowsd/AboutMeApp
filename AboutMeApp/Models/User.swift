@@ -1,5 +1,5 @@
 //
-//  Modales.swift
+//  User.swift
 //  AboutMeApp
 //
 //  Created by Alex Pesenka on 13/06/24.
@@ -14,16 +14,7 @@ struct User {
         return User(
             username: "user",
             password: "111",
-            person: Person(
-                firstName: "Alexander",
-                lastName: "Pesenka",
-                occupation: "Product Designer",
-                yearOfBirth: 1994,
-                countryOfBirth: "Belarus",
-                avatarFileName: "avatarImage",
-                biography: "Родился в октябре 1994, в городе Минск, любит работать удаленно, плавать, серфить, кататься на скейте, гулять и путешествовать. Длительное время работает дизайнером, изучает основы iOS программирования, но не чтобы стать чтобы стать программистом, а чтобы стать суперменом.",
-                favoriteAnimal: Animal(type: AnimalType.dog, imageName: AnimalType.dog.imageName, description: "Пока жил с родителями, воспитал две собаки, немецкую овчарку и бельгийскую овчарку, также известную как малинуа.")
-            )
+            person: Person.getPerson()
         )
     }
 }
@@ -37,12 +28,37 @@ struct Person {
     let avatarFileName: String
     let biography: String
     let favoriteAnimal: Animal
+    
+    var fullName: String {
+        "\(firstName) \(lastName)"
+    }
+    
+    static func getPerson() -> Person {
+        Person(
+            firstName: "Alexander",
+            lastName: "Pesenka",
+            occupation: "Product Designer",
+            yearOfBirth: 1994,
+            countryOfBirth: "Belarus",
+            avatarFileName: "avatarImage",
+            biography: "Родился в октябре 1994, в городе Минск, любит работать удаленно, плавать, серфить, кататься на скейте, гулять и путешествовать. Длительное время работает дизайнером, изучает основы iOS программирования, но не чтобы стать чтобы стать программистом, а чтобы стать суперменом.",
+            favoriteAnimal: Animal.getAnimal()
+        )
+    }
 }
 
 struct Animal {
     let type: AnimalType
     let imageName: String
     var description: String?
+    
+    static func getAnimal() -> Animal {
+        Animal(
+            type: .dog,
+            imageName: AnimalType.dog.imageName,
+            description: "Пока жил с родителями, воспитал две собаки, немецкую овчарку и бельгийскую овчарку, также известную как малинуа."
+        )
+    }
 }
 
 enum AnimalType: String {
