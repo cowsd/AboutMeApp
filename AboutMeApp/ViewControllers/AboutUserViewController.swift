@@ -15,38 +15,31 @@ import UIKit
         @IBOutlet weak var occupationLabel: UILabel!
         @IBOutlet weak var yearOfBirthLabel: UILabel!
         @IBOutlet weak var countryOfBirthLabel: UILabel!
-        @IBOutlet weak var avatarImage: UIImageView!
+        
+        @IBOutlet weak var avatarImage: UIImageView! {
+            didSet {
+                avatarImage.layer.cornerRadius = avatarImage.frame.size.width / 2
+            }
+        }
         
         var user: User!
         
-        var firstName: String!
-        var lastName: String!
-        var occupation: String!
-        var yearOfBirth: Int!
-        var countryOfBirth: String!
-        var avatar: String!
-        var biography: String!
-        
         override func viewDidLoad() {
             super.viewDidLoad()
+            view.addVerticalGradientLayer()
             
-            view.addVerticalGradientLayer(topColor: UIColor.topGradientColor, bottomColor: UIColor.bottomGradientColor)
-            
-            titleFullName.text = "\(firstName ?? "") \(lastName ?? "")"
-            firstNameLabel.text = firstName
-            lastNameLabel.text = lastName
-            occupationLabel.text = occupation
-            yearOfBirthLabel.text = String(yearOfBirth)
-            countryOfBirthLabel.text = countryOfBirth
-            
-            avatarImage.image = UIImage(named: avatar)
-            avatarImage.layer.cornerRadius = avatarImage.frame.size.width / 2
+            avatarImage.image = UIImage(named: "\(user.person.avatarFileName)")
+            titleFullName.text = user.person.fullName
+            firstNameLabel.text = user.person.firstName
+            lastNameLabel.text = user.person.lastName
+            occupationLabel.text = user.person.occupation
+            yearOfBirthLabel.text = String(user.person.yearOfBirth)
+            countryOfBirthLabel.text = user.person.countryOfBirth
         }
         
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if let detailedBioVC = segue.destination as? BiographyViewController {
-                detailedBioVC.biography = biography
-                detailedBioVC.firstName = firstName
+                detailedBioVC.user = user
             }
         }
         

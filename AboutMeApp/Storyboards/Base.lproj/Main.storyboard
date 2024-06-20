@@ -355,7 +355,7 @@
                     <navigationItem key="navigationItem" id="9BS-hE-y4x"/>
                     <connections>
                         <outlet property="biographyLabel" destination="fqg-AA-IbJ" id="bHh-OB-Nhm"/>
-                        <outlet property="firstNameLabel" destination="Eoc-f4-uX0" id="lJN-Th-avQ"/>
+                        <outlet property="titleLabel" destination="Eoc-f4-uX0" id="g1h-rf-Oay"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hpy-7v-B1D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -9,20 +9,20 @@ import UIKit
 
 final class BiographyViewController: UIViewController {
 
-    @IBOutlet weak var firstNameLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var biographyLabel: UILabel!
     
-    var biography: String!
-    var firstName: String!
+    var user: User!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addVerticalGradientLayer(topColor: UIColor.topGradientColor, bottomColor: UIColor.bottomGradientColor)
+        view.addVerticalGradientLayer()
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
-        firstNameLabel.text = "\(firstName ?? "") Bio"
-        biographyLabel.text = biography
+        titleLabel.text = "\(user.person.fullName) Bio"
+        biographyLabel.text = user.person.biography
     }
 }

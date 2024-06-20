@@ -5,6 +5,8 @@
 //  Created by Alex Pesenka on 13/06/24.
 //
 
+import UIKit
+
 struct User {
     let username: String
     let password: String
@@ -48,37 +50,16 @@ struct Person {
 }
 
 struct Animal {
-    let type: AnimalType
+    let title: String
     let imageName: String
-    var description: String?
+    let description: String
     
     static func getAnimal() -> Animal {
         Animal(
-            type: .dog,
-            imageName: AnimalType.dog.imageName,
+            title: "Собака",
+            imageName: "dogImage",
             description: "Пока жил с родителями, воспитал две собаки, немецкую овчарку и бельгийскую овчарку, также известную как малинуа."
         )
     }
-}
-
-enum AnimalType: String {
-    case dog = "Собака"
-    case cat = "Кошка"
-    case monkey = "Обезьяна"
-    case parrot = "Попугай"
-    
-    var imageName: String {
-        switch self {
-        case .dog:
-            return "dogImage"
-        case .cat:
-            return "catImage"
-        case .monkey:
-            return "monkeyImage"
-        case .parrot:
-            return "parrotImage"
-        }
-    }
-    
 }
 

@@ -21,10 +21,9 @@ final class TabBarViewController: UITabBarController {
         
     }
     
+    
     private func transferData() {
-        
         guard let viewControllers else { return }
-        
         viewControllers.forEach {
             if let welcomeVC = $0 as? WelcomeViewController {
                 welcomeVC.user = user
@@ -34,11 +33,10 @@ final class TabBarViewController: UITabBarController {
                     return
                 }
                 aboutUserVC.user = user
-            } else if let favoriteAnimalsVC = $0 as? FavoriteAnimalViewController {
-                favoriteAnimalsVC.user = user
+            } else if let favoriteAnimalVC = $0 as? FavoriteAnimalViewController {
+                favoriteAnimalVC.user = user
             }
         }
-        
     }
     
 }

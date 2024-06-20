@@ -11,6 +11,7 @@
 		FA213D762C1B7E4400383A59 /* AboutUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA213D752C1B7E4400383A59 /* AboutUserViewController.swift */; };
 		FA749FBE2C1F22F500215764 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA749FBD2C1F22F500215764 /* TabBarViewController.swift */; };
 		FA79B43B2C160205002CD48D /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79B43A2C160205002CD48D /* WelcomeViewController.swift */; };
+		FA9314E72C24A94E004B2DED /* Extension + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9314E62C24A94E004B2DED /* Extension + UIView.swift */; };
 		FAB1AE7B2C144C0F00AAC8C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1AE7A2C144C0F00AAC8C2 /* AppDelegate.swift */; };
 		FAB1AE7D2C144C0F00AAC8C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1AE7C2C144C0F00AAC8C2 /* SceneDelegate.swift */; };
 		FAB1AE7F2C144C0F00AAC8C2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1AE7E2C144C0F00AAC8C2 /* LoginViewController.swift */; };
@@ -26,6 +27,7 @@
 		FA213D752C1B7E4400383A59 /* AboutUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUserViewController.swift; sourceTree = "<group>"; };
 		FA749FBD2C1F22F500215764 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		FA79B43A2C160205002CD48D /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		FA9314E62C24A94E004B2DED /* Extension + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIView.swift"; sourceTree = "<group>"; };
 		FAB1AE772C144C0F00AAC8C2 /* AboutMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB1AE7A2C144C0F00AAC8C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAB1AE7C2C144C0F00AAC8C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		FA9314E52C24A8E5004B2DED /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA9314E62C24A94E004B2DED /* Extension + UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FAB1AE6E2C144C0F00AAC8C2 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +118,7 @@
 		FAB1AE792C144C0F00AAC8C2 /* AboutMeApp */ = {
 			isa = PBXGroup;
 			children = (
+				FA9314E52C24A8E5004B2DED /* Extensions */,
 				FA213D742C1B5B3C00383A59 /* Models */,
 				FA213D6F2C1B5A6600383A59 /* ViewControllers */,
 				FA213D702C1B5A8E00383A59 /* Storyboards */,
@@ -194,6 +205,7 @@
 				FAD6D6ED2C1CDF6500EAE8F5 /* FavoriteAnimalViewController.swift in Sources */,
 				FA749FBE2C1F22F500215764 /* TabBarViewController.swift in Sources */,
 				FA213D732C1B5B2200383A59 /* User.swift in Sources */,
+				FA9314E72C24A94E004B2DED /* Extension + UIView.swift in Sources */,
 				FAB1AE7D2C144C0F00AAC8C2 /* SceneDelegate.swift in Sources */,
 				FA213D762C1B7E4400383A59 /* AboutUserViewController.swift in Sources */,
 				FAB291E02C1DA8EA00D9593C /* BiographyViewController.swift in Sources */,
