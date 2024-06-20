@@ -5,8 +5,6 @@
 //  Created by Alex Pesenka on 13/06/24.
 //
 
-import UIKit
-
 struct User {
     let username: String
     let password: String
